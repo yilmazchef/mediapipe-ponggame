@@ -25,6 +25,7 @@ gameOver = False
 score = [0, 0]
 
 while True:
+
     _, img = cap.read()
     img = cv2.flip(img, 1)
     imgRaw = img.copy()
