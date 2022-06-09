@@ -15,7 +15,7 @@ imgBat1 = cv2.imread("Resources/bat1.png", cv2.IMREAD_UNCHANGED)
 imgBat2 = cv2.imread("Resources/bat2.png", cv2.IMREAD_UNCHANGED)
 
 # Hand Detector
-detector = HandDetector(detectionCon=0.8, maxHands=2)
+detector = HandDetector(detectionCon=0.80, maxHands=2)
 
 # Variables
 ballPos = [100, 100]
@@ -94,3 +94,11 @@ while True:
         gameOver = False
         score = [0, 0]
         imgGameOver = cv2.imread("Resources/gameOver.png")
+    if key == ord('f'):
+        speedX = 35
+        speedY = 35
+    if key == ord('s'):
+        speedX = 15
+        speedY = 15
+    if key == ord('q'):
+        exit(-1)
